@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Delete Wish</h1>
+
+<h4>Are you sure you want to delete your wish?</h4>
+
+<form class="pure-form" action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Yes - My Dreams are Broken" class="pure-button">
+    <a class="pure-button" href="{% url 'wish_list' %}">Cancel</a>
+</form>
+
+{% endblock %}
